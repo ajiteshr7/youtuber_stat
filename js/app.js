@@ -21,14 +21,14 @@
                 }
             };
         })
-        .controller('mainController', ['$scope', '$http', function ($scope, $http) {
+        .controller('mainController', ['$scope', '$http', '$timeout' ,function ($scope, $http, $timeout) {
             $scope.click = false;
             $scope.click = function () {
                 if ($scope.active === true) {
                     if (!$scope.searchInput)
                         $scope.active = false;
                     else
-                        $scope.getChannelData();
+                        $scope.intervalFunction();
                 } else
                     $scope.active = true;
             };
@@ -48,6 +48,12 @@
                     }, function (error) {
                         console.log(error, 'cant get data.');
                     });
+            };
+            $scope.intervalFunction = function () {
+                $timeout(function () {
+                    $scope.getChannelData();
+                    $scope.intervalFunction();
+                }, 1000)
             };
         }]);
 })();
