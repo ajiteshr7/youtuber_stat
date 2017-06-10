@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Youtube sub counter</title>
+    <!--    offline lib-->
+
+    <!--    <link rel="stylesheet" href="../static/bootstrap3/css/bootstrap.min.css">-->
+    <!--   <link rel="stylesheet" href="../static/odometer/themes/odometer-theme-plaza.css">-->
+
+    <!--cdns-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/odometer/0.4.8/themes/odometer-theme-plaza.css">
+    <!--   my styles-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="youtubeApp">
+    <div class="container">
+        <!--        <h1 class="text-center">Youtube Subscriber Count</h1>-->
+
+        <div class="row vertical-center" ng-controller="mainController">
+            <div class="col-sm-12">
+                <div class="search" ng-class="{open:isActive()}">
+                    <form name="channelForm" ng-submit "active && getChannelData()">
+                        <input name="search" type="text" class="search-box" ng-model="searchInput" />
+                        <span class="search-button" type="submit" ng-click="click()">
+                            <span class="search-icon"></span>
+                        </span>
+                    </form>
+                </div>
+                <!--                 {{ channelData.data.items[0].statistics.subscriberCount }}-->
+                <div class="col-sm-4 my-margins">
+                    <div ng-show="value" angular-odometer data-odometer="value"></div>
+                    <!--                  {{ subcount }}-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--        Angularjs files start-->
+    <!--    <script src="../static/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!--        Angularjs files end-->
+    <!--        <script src="../static/odometer/odometer.min.js"></script>-->
+    <script src="http://cdn.jsdelivr.net/odometer/0.4.8/odometer.min.js"></script>
+</body>
+
+</html>
