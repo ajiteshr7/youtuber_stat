@@ -43,7 +43,8 @@
                 $http.get('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=' + channelName + '&' + 'key=AIzaSyAIVNJgCCNwbdoafl7gpQPp4hhfAdeZPPw')
                     .then(function (response) {
                         $scope.channelData = response;
-                        $scope.value = response.data.items[0].statistics.subscriberCount;
+                        if(response.data.items)
+                            $scope.value = response.data.items[0].statistics.subscriberCount;
 
                     }, function (error) {
                         console.log(error, 'cant get data.');

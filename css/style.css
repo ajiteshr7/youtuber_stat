@@ -1,6 +1,49 @@
 * {
     box-sizing: border-box;
 }
+html {
+    font-size: 150%
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size:125%
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size:100%
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size:80%
+    }
+}
+
+@media (max-width: 568px) {
+    html {
+        font-size:50%
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size:35%
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size:25%
+    }
+}
+
+body {
+    font-family: "proxima-nova","Helvetica Neue",sans-serif
+}
 
 body {
     background: crimson;
@@ -126,9 +169,11 @@ body {
 
 .my-margins {
     margin-top: 20vh;
-    margin-left: 40%;
+/*
+    margin-left: 30%;
+    margin-right: 30%;
+*/
 }
-
-.odometer {
-    font-size: 2.5em !important;
+.odometer-container {
+    font-size: 3em
 }
