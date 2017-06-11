@@ -46,7 +46,7 @@ body {
 }
 
 body {
-    background: crimson;
+    background: #e62117;
 }
 
 .vertical-center {
@@ -57,7 +57,7 @@ body {
     width: 100px;
     height: 100px;
     margin: 40px auto 0;
-    background-color: crimson;
+    background-color: #e62117;
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -69,7 +69,7 @@ body {
     width: 3px;
     height: 100%;
     position: relative;
-    background-color: black;
+    background-color: white;
     transition: all 0.5s ease;
 }
 
@@ -113,7 +113,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    border: 3px solid black;
+    border: 3px solid white;
     display: block;
     position: relative;
     margin-left: 5px;
@@ -128,7 +128,7 @@ body {
     right: -2px;
     top: 30px;
     display: block;
-    background-color: black;
+    background-color: white;
     transform: rotate(-45deg);
     transition: all 0.5s ease;
 }
@@ -141,7 +141,7 @@ body {
     right: -12px;
     top: 40px;
     display: block;
-    background-color: black;
+    background-color: white;
     transform: rotate(-45deg);
     transition: all 0.5s ease;
 }
