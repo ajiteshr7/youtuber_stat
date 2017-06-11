@@ -29,7 +29,7 @@
             <div class="col-sm-12">
                 <div class="search" ng-class="{open:isActive()}">
                     <form name="channelForm" ng-submit "active && getChannelData()">
-                        <input name="search" type="text" class="search-box" ng-model="searchInput" />
+                        <input name="search" type="text" class="search-box" ng-model="searchInput" ng-keyup="$event.keyCode == 13 && active && click()" placeholder="{{ channelName }}"/>
                         <span class="search-button" type="submit" ng-click="click()">
                             <span class="search-icon"></span>
                         </span>
@@ -39,7 +39,7 @@
             <!--                 {{ channelData.data.items[0].statistics.subscriberCount }}-->
             <div class="col-md-6 col-sm-12 col-md-offset-4 my-margins">
                 <div class="odometer-container">
-                    <div ng-show="value" angular-odometer data-odometer="value"></div>
+                    <div ng-show="value && active" angular-odometer data-odometer="value"></div>
                     <!--                  {{ subcount }}-->
                 </div>
             </div>

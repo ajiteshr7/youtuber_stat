@@ -37,6 +37,7 @@
             };
             $scope.getChannelData = function () {
                 var channelName = "Google";
+                $scope.channelName = channelName;
                 if ($scope.searchInput)
                     channelName = $scope.searchInput;
                 $scope.channelData = [];

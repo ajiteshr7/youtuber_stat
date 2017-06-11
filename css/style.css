@@ -175,5 +175,9 @@ body {
 */
 }
 .odometer-container {
-    font-size: 3em
+    font-size: 3em;
+}
+
+.odometer-digit{
+    color: #e62117 !important;    
 }
