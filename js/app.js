@@ -55,7 +55,7 @@
                 $timeout(function () {
                     $scope.getChannelData();
                     $scope.intervalFunction();
-                }, 1000)
+                }, 2000)
             };
         }]);
 })();
